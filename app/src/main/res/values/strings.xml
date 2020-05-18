@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VideoChat</string>
+
+    <!--BaseRtPermissionsDelegate-->
+    <string name="common_rt_permissions_rationale_light_continue">Continue</string>
+    <string name="common_rt_permissions_rationale_light_cancel">Cancel</string>
+    <string name="common_rt_permissions_rationale_hard_continue">Settings</string>
+    <string name="common_rt_permissions_rationale_hard_cancel">Cancel</string>
+
+    <!--MainActivity-->
+    <string name="main_permission_rationale_light">App needs permission to access camera</string>
+    <string name="main_permission_rationale_hard">App is not allowed to access camera.\nAdd permission in app settings</string>
+</resources>

@@ -1,0 +1,26 @@
+def dependencyGroup(Closure closure) {
+    closure.delegate = dependencies
+    return closure
+}
+
+ext {
+    // Local jars
+    depsLocalJars = dependencyGroup {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+    }
+
+    // Kotlin
+    depsKotlin = dependencyGroup {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    }
+
+    // Tests
+    depsTests = dependencyGroup {
+        // JUnit
+        testImplementation 'junit:junit:4.12'
+        // Test runner
+        androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+        // Espresso
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    }
+}
